@@ -4,7 +4,7 @@ Coding Challenge package
 This is the Java implementation of the ZIP code simplification challenge.  The challenge package 
 contains a util package with most of the logical components.  
 
-The main entry class (ZipCodeRangeSimplifier)  takes in the input, parses it with ZipCodeParser,
+The main entry class (org.ziprange.Main)  takes in the input, parses it with ZipCodeParser,
  and processes that result with RangeListSimplifier.  
  ZipCodeRange is a model class holding the ranges (pairs of low,high zip codes).
  
