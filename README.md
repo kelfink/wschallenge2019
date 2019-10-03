@@ -8,15 +8,26 @@ The main entry class (org.ziprange.Main)  takes in the input, parses it with Zip
  and processes that result with RangeListSimplifier.  
  ZipCodeRange is a model class holding the ranges (pairs of low,high zip codes).
  
-RangeListSimplifier performs the simplification routine on the 
+RangeListSimplifier performs the simplification routine on the structured list of zipcode ranges.  That's where
+the real algorithm work is done.
 
-You can run the Unit tests from the command line as follows:
+You can run the Unit tests from the command line as follows
+## compile the projest
+$ mvn compile
+## package and generate the jar 
+$ mvn package
+## run the tests along
+$ mvn test 
 
-> java -jar wschallenge-1.0-SNAPSHOT.jar  [94133,94133] [94200,94299] [94600,94699]
+## Run your own set of zipcode ranges using the jar directly...
 
-[94133,94133] [94200,94299] [94600,94699]
-> java -jar wschallenge-1.0-SNAPSHOT.jar  [94133,94133] [94200,94299] [94226,94399]
-[94133,94133] [94200,94399]
+`$ java -jar target/wschallenge-1.0-SNAPSHOT.jar  [94133,94133] [94200,94299] [94600,94699]`
+
+`[94133,94133] [94200,94299] [94600,94699]`
+
+`$ java -jar target/wschallenge-1.0-SNAPSHOT.jar  [94133,94133] [94200,94299] [94226,94399]`
+
+`[94133,94133] [94200,94399]`
 
 The unit tests RangeListSimplifierTest.testChallengeFirstSampleValue and RangeListZImplifierTest.testChallengeSecondSampleValue
   also perform tests on the two input examples described in the challenge.ß
